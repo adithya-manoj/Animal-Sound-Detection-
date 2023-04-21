@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".FeedbackActivity">
+
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="263dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="8dp"
+        android:text="Feedback"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textFontWeight="400"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_feedback"
+        android:layout_width="361dp"
+        android:layout_height="425dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/white"
+        android:ems="10"
+
+        android:gravity="top|left"
+        android:hint="Type your feedback here"
+        android:inputType="textPersonName"
+        android:lines="5"
+        android:padding="8dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <Button
+        android:id="@+id/btn_feedback"
+        android:layout_width="400dp"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@color/colorPrimary"
+        android:text="Submit"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_feedback"
+        app:layout_constraintVertical_bias="1.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

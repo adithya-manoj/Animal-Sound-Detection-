@@ -1,0 +1,30 @@
+{% extends 'admin/index.html' %}
+{% block body %}
+
+<table width="400" cellpadding="10" cellspacing="15" align="center" border="1">
+    <tbody>
+    <tr>
+        <th scope="column">S.No</th>
+        <th scope="column">Username</th>
+        <th scope="column">Location</th>
+        <th scope="column">Phone</th>
+        <th scope="column">Email</th>
+        <th scope="column">Profile Image</th>
+
+    </tr>
+    {%  for no in data %}
+    <tr>
+        <td> {{ loop.index }}</td>
+        <td> {{no['name']}}</td>
+        <td> {{ no['place'] }} </td>
+        <td> {{ no['phone'] }} </td>
+        <td> {{ no['email'] }} </td>
+        <td> <img class="profile-image" src="../static/uploads/user_image/{{ no['photo'] }}"> </td>
+
+
+    </tr>
+    {%endfor%}
+
+    </tbody>
+</table>
+{% endblock %}

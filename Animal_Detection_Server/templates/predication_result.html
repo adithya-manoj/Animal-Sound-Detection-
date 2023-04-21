@@ -1,0 +1,20 @@
+{% extends 'basetemp.html' %}
+{% block body %}
+<link rel="stylesheet" href="static/user_temp/assets/css/style.css">
+<h2> Prediction Result </h2>
+
+
+{% if data!="null" %}
+  <div>
+    <img src="../../static/uploads/animal_img/{{ data['photo'] }}" width="300px" height="250px">
+  </div>
+  <h3>  <span>Name : </span> {{ data['name'] }} </h3>
+    <p>{{ data['description'] }}</p>
+
+
+{% else%}
+    <p> Couldn't Recognize the Sound </p>
+
+{% endif %}
+
+{% endblock %}

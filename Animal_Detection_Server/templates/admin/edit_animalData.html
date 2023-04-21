@@ -1,0 +1,44 @@
+{% extends 'admin/index.html' %}
+{% block body %}
+
+<div class="container">
+
+
+    <div class="form-wrapper">
+
+    <img src="/static/uploads/animal_img/{{ data['photo'] }}" width="250dp" height="250dp">
+
+
+        <form class="form-class" method="POST" action="/admin/edit_animalDataFn" enctype="multipart/form-data">
+				<span class="form-title">
+					<h2 align="center">ADD ANIMAL DATA</h2>
+                    <br>
+                    <br>
+				</span>
+            <div class="wrap-input">
+                <label for="animal_name">Animal Name</label>
+                <input id="animal_name"class="input-txtbox" type="text" name="animal_name" value="{{ data['name'] }}" required>
+                <span> </span>
+            </div>
+
+                 <label for="desc">Description</label>
+                 <textarea class="input-txtbox" id="desc" name="animal_desc" rows="10" cols="33" required> {{ data['description'] }}</textarea>
+
+
+            <div class="wrap-input">
+                <label for="img">Update image:</label>
+                <input type="file" id="img" name="img" accept="image/*">
+                <span> </span>
+            </div>
+
+
+            <div class="btn-container">
+                <button class="submit-btn">
+                    Update Data
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+        {% endblock %}

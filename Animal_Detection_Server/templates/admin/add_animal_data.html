@@ -1,0 +1,42 @@
+{% extends 'admin/index.html' %}
+{% block body %}
+
+<div class="container">
+
+
+    <div class="form-wrapper">
+        <form class="form-class" method="POST" action="/admin/add_animalDFn" enctype="multipart/form-data">
+				<span class="form-title">
+					<h2 align="center">ADD ANIMAL DATA</h2>
+                    <br>
+                    <br>
+				</span>
+            <div class="wrap-input">
+                <label for="animal_name">Animal Name</label>
+                <input id="animal_name"class="input-txtbox" type="text" name="animal_name" placeholder="Animal Name" required>
+                <span> </span>
+            </div>
+             <div class="wrap-input">
+                 <label for="desc">Description  </label>
+                 <textarea class="input-txtbox" id="desc" name="animal_desc" rows="10" cols="35" required> </textarea>
+                  <span> </span>
+            </div>
+
+            <div class="wrap-input">
+                <label for="img">Select image:</label>
+                <input type="file" id="img" name="img" accept="image/*" required>
+                <span> </span>
+            </div>
+
+
+            <div class="btn-container">
+                <button class="submit-btn">
+                    Add Data
+                </button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}

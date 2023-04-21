@@ -1,0 +1,55 @@
+{% extends 'admin/index.html' %}
+{% block body %}
+
+     <style>
+        h1, h3 {
+            text-align: center;
+        }
+        table {
+            border-spacing: 0px;
+            table-layout: fixed;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        th {
+            color: green;
+            border: 1px solid black;
+        }
+        td {
+            border: 1px solid black;
+        }
+    </style>
+
+
+<table  >
+    <tbody>
+    <tr>
+        <th >S.No</th>
+        <th >Animal Name</th>
+        <th >Animal Description</th>
+        <th >Image</th>
+        <th ></th>
+        <th ></th>
+
+    </tr>
+    {%  for no in data %}
+    <tr>
+        <td> {{ loop.index }}</td>
+        <td> {{no['name']}}</td>
+        <td>{{ no['description'] }} </td>
+        <td> <img  src="/static/uploads/animal_img/{{ no['photo'] }}" height="100" width="90"> </td>
+        <td><a href="/adminedit_animalData/{{ no['animal_id'] }}">Edit</a> </td>
+        <td><a href="/admin/delete_animalData/{{ no['animal_id'] }}">Delete</a> </td>
+
+    </tr>
+    {%endfor%}
+
+    </tbody>
+</table>
+    <style>
+    .cell-breakWord { word-wrap: break-word; max-width: 1px;hyphens: auto; }
+    {#.cell-breakWord { white-space:pre-line ; word-break: break-all }#}
+    </style>
+{% endblock %}
+
+{#word-wrap:break-word;#}

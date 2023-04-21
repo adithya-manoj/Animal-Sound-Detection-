@@ -1,0 +1,59 @@
+{% extends 'basetemp.html' %}
+{% block body %}
+<link rel="stylesheet" href="static/user_temp/assets/css/style.css">
+<h2> Edit Profile</h2>
+
+
+
+
+    <div>
+      <form class="form-class" method="POST" action="/updateProfile" enctype="multipart/form-data">
+
+       <table width="500" cellpadding="2" cellspacing="15" align="Left" >
+    <tbody>
+    <tr>
+        <th scope="row">Username</th>
+        <td>
+           <input class="input-txtbox" type="text" name="name" value="{{ data['name'] }}" required>
+        </td>
+
+    </tr>
+     <tr>
+        <th scope="row">Location</th>
+        <td>
+            <input class="input-txtbox" type="text" name="place" value="{{ data['place']}}" required>
+        </td>
+
+    </tr>
+     <tr>
+        <th scope="row">Phone</th>
+        <td><input class="input-txtbox" type="text" name="phone" value="{{ data['phone'] }}" maxlength="10" required></td>
+
+    </tr>
+    <tr>
+        <th scope="row">Email</th>
+        <td> <input class="input-txtbox" type="text" name="email" value="{{ data['email'] }}" required></td>
+
+    </tr>
+     <tr>
+        <th scope="row">Photo</th>
+        <td>
+            <input type="file" id="img" name="photo" accept="image/*" >
+           </td>
+
+    </tr>
+    <tr>
+        <td> <button class="btn-blue">
+                    Update Data
+                </button>
+        </td>
+    </tr>
+
+     </tbody>
+       </table>
+
+      </form>
+    </div>
+
+
+{% endblock %}

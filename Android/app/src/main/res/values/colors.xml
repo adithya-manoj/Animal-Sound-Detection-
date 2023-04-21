@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mkk">#008577</color>
+    <color name="ko">#00574B</color>
+    <color name="colorPrimaryDark">#1F1482</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="black">#000</color>
+    <color name="buttonclr">#db6400</color>
+    <color name="white">#fff</color>
+    <color name="primarybg">#00303f</color>
+    <color name="colorPrimary">#150E56</color>
+</resources>

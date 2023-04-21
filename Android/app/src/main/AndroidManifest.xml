@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="adhi.avi.animaldetection">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/appname"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Record_animal_sound"></activity>
+
+        <activity android:name=".Record_animal_sound_copy"/>
+
+
+
+        <activity
+            android:name=".Sam"
+            android:label="@string/title_activity_sam"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Home"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AnimalViewActivity" />
+        <activity android:name=".PredictionHistory" />
+        <activity android:name=".FeedbackActivity" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name=".NetworkConnect">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UpdateProfile" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".HomePage" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".OTPconfirm" />
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".LoginActivity" />
+    </application>
+
+</manifest>

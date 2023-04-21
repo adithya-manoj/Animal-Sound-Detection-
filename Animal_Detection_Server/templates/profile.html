@@ -1,0 +1,48 @@
+{% extends 'basetemp.html' %}
+{% block body %}
+<link rel="stylesheet" href="static/user_temp/assets/css/style.css">
+<h2>Profile</h2>
+
+{% if data[photo] !="" %}
+<img class="profile-img" src="../static/uploads/user_image/{{ data['photo'] }}" alt="Avatar" style=" margin:40px; margin-left:0px; width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;">
+{%else%}
+   <h4 style="padding: 50px;"> User image not added yet!</h4>
+{% endif %}
+    <a href="/editProfile">Edit Profile</a>
+
+    <div>
+
+
+       <table width="500" cellpadding="2" cellspacing="15" align="Left" >
+    <tbody>
+    <tr>
+        <th scope="row">Username</th>
+        <td>{{ data['name'] }}</td>
+
+    </tr>
+     <tr>
+        <th scope="row">Location</th>
+        <td>{{ data['place'] }}</td>
+
+    </tr>
+     <tr>
+        <th scope="row">Phone</th>
+        <td>{{ data['phone'] }}</td>
+
+    </tr>
+    <tr>
+        <th scope="row">Email</th>
+        <td>{{ data['email'] }}</td>
+
+    </tr>
+
+
+     </tbody>
+       </table>
+    </div>
+
+
+{% endblock %}

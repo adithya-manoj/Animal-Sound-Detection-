@@ -1,0 +1,28 @@
+{% extends 'basetemp.html' %}
+{% block body %}
+<link rel="stylesheet" href="static/user_temp/assets/css/style.css">
+<h2> Prediction History </h2>
+
+    <br><br>
+    <table width="500" cellpadding="2" cellspacing="15" align="Left" >
+    <tbody>
+    <tr>
+        <th scope="column">S.No</th>
+        <th scope="column">Animal Name</th>
+        <th scope="column">Date</th>
+
+    </tr>
+    {%  for no in data %}
+    <tr>
+        <td> {{ loop.index }}</td>
+        <td> {{no['name']}}</td>
+        <td> {{ no['date'] }} </td>
+
+    </tr>
+    {%endfor%}
+
+    </tbody>
+</table>
+
+
+{% endblock %}

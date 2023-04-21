@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>animal dashboard</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../static/admin_temp/assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../static/admin_temp/assets/vendors/iconfonts/ionicons/dist/css/ionicons.css">
+    <link rel="stylesheet" href="../static/admin_temp/assets/vendors/iconfonts/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../static/admin_temp/assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../static/admin_temp/assets/vendors/css/vendor.bundle.addons.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../static/admin_temp/assets/css/shared/style.css">
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../static/admin_temp/assets/css/demo_1/style.css">
+    <!-- End Layout styles -->
+    <link rel="shortcut icon" href="../static/admin_temp/assets/images/favicon.ico" />
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
+          <a class="navbar-brand brand-logo" href="/admin">
+             ADMINISTRATOR
+          </a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center">
+
+
+
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="mdi mdi-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+
+            <li class="nav-item nav-category">Main Menu</li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/add_animalD">
+                <i class="menu-icon typcn typcn-document-text"></i>
+                <span class="menu-title">Add Animal Data</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="/admin/view_animalD" aria-expanded="false" aria-controls="ui-basic">
+                <i class="menu-icon typcn typcn-coffee"></i>
+                <span class="menu-title">View AnimalData</span>
+
+              </a>
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/viewUsers">
+                <i class="menu-icon typcn typcn-shopping-bag"></i>
+                <span class="menu-title"> View Users</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/viewFeedback">
+                <i class="menu-icon typcn typcn-th-large-outline"></i>
+                <span class="menu-title">View Feedback</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/changePass">
+                <i class="menu-icon typcn typcn-bell"></i>
+                <span class="menu-title">Change Password</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">
+                <i class="menu-icon typcn typcn-user-outline"></i>
+                <span class="menu-title">Logout </span>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <!-- Page Title Header Starts-->
+            <div class="row page-title-header">
+              <div class="col-12">
+                <div class="page-header">
+                  <h4 class="page-title">Dashboard</h4>
+
+                </div>
+              </div>
+
+            </div>
+            <!-- Page Title Header Ends-->
+        <div class="card">
+          <div class="card-body">
+
+              {% block body %}
+
+              {% endblock %}
+          </div>
+        </div>
+
+
+
+
+
+
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="static/admin_temp/assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="static/admin_temp/assets/vendors/js/vendor.bundle.addons.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="static/admin_temp/assets/js/shared/off-canvas.js"></script>
+    <script src="static/admin_temp/assets/js/shared/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="static/admin_temp/assets/js/demo_1/dashboard.js"></script>
+    <!-- End custom js for this page-->
+    <script src="static/admin_temp/assets/js/shared/jquery.cookie.js" type="text/javascript"></script>
+  </body>
+</html>

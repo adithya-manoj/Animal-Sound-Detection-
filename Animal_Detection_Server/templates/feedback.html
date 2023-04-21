@@ -1,0 +1,26 @@
+{% extends 'basetemp.html' %}
+{% block body %}
+<link rel="stylesheet" href="static/user_temp/assets/css/style.css">
+
+     {%  with messages = get_flashed_messages() %}
+          {% if messages %}
+              <div class="alert" style="color:#000; padding: 10px;">
+               <center><h5>{{messages[0]}}</h5></center>
+              </div>
+          {% endif %}
+          {%  endwith %}
+
+<h2>FEEDBACK</h2>
+
+
+
+<form action="/feedbackFn" method="post">
+  <p>
+    <textarea id="feedback-box" name="feedback" cols="50" rows="10" ></textarea>
+  </p>
+  <p>
+    <input name="submit" type="submit" class="btn-blue" value="Submit" />
+  </p>
+</form>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'admin/index.html' %}
+{% block body %}
+
+<h2><center>User Feedback</center></h2>
+
+
+<table width="700" cellpadding="15" cellspacing="15" align="center" border="1">
+    <tbody>
+    <tr>
+        <th scope="column">S.No</th>
+        <th scope="column">Username</th>
+        <th scope="column">Date</th>
+        <th scope="column">Feedback</th>
+
+
+    </tr>
+    {%  for no in data %}
+    <tr>
+        <td> {{ loop.index }}</td>
+        <td> {{no['name']}}</td>
+        <td> {{ no['date'] }} </td>
+        <td> {{ no['feedback'] }} </td>
+
+    </tr>
+    {%endfor%}
+
+    </tbody>
+</table>
+{% endblock %}
